@@ -1,0 +1,3 @@
+#Assignment: Write Hello World
+#week 3
+print('hello world')
