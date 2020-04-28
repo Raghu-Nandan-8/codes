@@ -1,0 +1,19 @@
+#Our First Database
+#Week 2
+
+#type the following code in SQLite Browser(in execute SQL)
+CREATE TABLE Ages ( 
+  name VARCHAR(128), 
+  age INTEGER
+)
+#now clear the exucting and type this and run
+DELETE FROM Ages;
+INSERT INTO Ages (name, age) VALUES ('Cady', 18);
+INSERT INTO Ages (name, age) VALUES ('Arayan', 25);
+INSERT INTO Ages (name, age) VALUES ('Tehzeeba', 33);
+INSERT INTO Ages (name, age) VALUES ('Katlyn', 33);
+#now clear and type this and run
+SELECT hex(name || age) AS X FROM Ages ORDER BY X
+#Now run the file.
+#Now go to browse data, the first row contains the answer,
+#copy and pase it into the asignment
