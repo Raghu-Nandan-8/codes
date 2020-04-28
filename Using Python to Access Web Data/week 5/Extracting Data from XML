@@ -1,0 +1,24 @@
+#Extracting Data from XML
+#week 5
+import urllib
+import xml.etree.ElementTree as ET
+
+#In url pate the link given in the question, to get the correct answer
+#The link should be like the current url
+url = 'http://py4e-data.dr-chuck.net/comments_463715.xml'
+print ("Retrieving " + url)
+
+xml = urllib.request.urlopen(url).read()
+print ("Retrieved: " + str(len(xml)) + " characters")
+
+tree = ET.fromstring(xml)
+
+counts =  tree.findall('.//count')
+print ("Count: " + str(len(counts)))
+
+accumulator = 0
+
+for count in counts:
+    accumulator += int(count.text)
+
+print ("Sum:" + str(accumulator))
