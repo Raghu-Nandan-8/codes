@@ -1,0 +1,13 @@
+#Assignment 5.2
+#week 7
+a=[]
+while True:
+    num = input("Enter a number: ")
+    try:
+     int(num)
+     a.append(int(num))
+    except:
+     if num == "done" : break
+print("Invalid input")
+print("Maximum is",max(a))
+print("Minimum is",min(a))
