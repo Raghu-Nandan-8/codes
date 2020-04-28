@@ -1,0 +1,20 @@
+#Scraping HTML Data with BeautifulSoup
+#week 4
+import urllib
+import re
+count = 0
+from BeautifulSoup import *
+
+#In url pate the link given in the question, to get the correct answer
+#The link should be like the current url
+
+url = "http://python-data.dr-chuck.net/comments_283399.html"
+
+html = urllib.urlopen(url).read()
+soup = BeautifulSoup(html)
+tags = soup("span")
+for tag in tags:
+ stringnumber = tag.contents
+ number= int(stringnumber[0-1])
+ count = count+ number
+print (count)
